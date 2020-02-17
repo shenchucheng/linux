@@ -39,8 +39,13 @@ nnoremap <C-H> <C-W><C-H>
 
 " 折叠
 nnoremap <space> za
+
+" set paste
+set pastetoggle=<F3>
+
 " 目录树
 map <F4> :NERDTreeToggle<CR>
+
 "Python
 set filetype=python
 au BufNewFile,BufRead .py,.pyw setf python
