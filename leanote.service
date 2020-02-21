@@ -1,0 +1,11 @@
+[Unit]
+Description=Leanote Server
+After=network.target
+Requires=mongod.service
+
+[Service]
+ExecStart= /usr/local/bin/leanote 
+# Type=forking
+
+[Install]
+WantedBy=multi-user.target

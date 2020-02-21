@@ -1,0 +1,10 @@
+[Unit]
+Description=Nat123
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/nat123
+
+[Install]
+WantedBy=multi-user.target
+

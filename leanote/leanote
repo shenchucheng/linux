@@ -1,0 +1,7 @@
+#!/bin/sh
+export GOROOT=/usr/local/lib64/go
+export GOBIN=$GOROOT/bin
+export PATH=$PATH:$GOBIN
+export GOPATH=/home/cheng/goproject
+revel run github.com/leanote/leanote
+

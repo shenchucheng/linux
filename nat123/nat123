@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /opt/nat123
+/usr/bin/mono nat123linux.sh service
