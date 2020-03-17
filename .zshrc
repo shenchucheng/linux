@@ -73,7 +73,9 @@ plugins=(git pip)
 source $ZSH/oh-my-zsh.sh
 # source /home/cheng/goproject/.gorc
 # export PATH=/usr/local/python3/bin:$PATH
-
+export PATH=/usr/local/lib64/node-v9.3.0-linux-x64/lib/node_modules/nodeppt/bin/:$PATH
+export http_proxy=http://127.0.0.1:8118
+export https_proxy=http://127.0.0.1:8118
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -103,7 +105,7 @@ alias del="mv -t ~/.temp"
 alias fileshare="nohup python3 -m http.server6 >> ~/.temp/python_output.txt"
 alias ftpd="nohup python3 -m pyftpdlib -i :: >> ~/.temp/python_ftpd_output.txt"
 # alias sudo="sudo env PATH=$PATH"
-
+alias ngrok_ssh="autossh -M 2022 -NR 0.0.0.0:2222:127.0.0.1:22 cheng@106.13.24.45 -f"
 
 # pip zsh completion start
 function _pip_completion {
