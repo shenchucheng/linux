@@ -1,0 +1,22 @@
+# Unison preferences file
+root = /home/cheng/goproject/src/github.com/leanote/leanote/
+#知识库文件所在目录
+root = ssh://cheng@106.13.24.45//home/cheng/goproject/src/github.com/leanote/leanote/
+#需要同步到的文件夹
+batch = false 
+# atuo
+#repeat = 600
+#每60秒检查一次
+fastcheck = false 
+#true 表示同步时仅通过文件的创建时间来比较，如果选项为false，Unison则将比较两地文件的内容。 
+sshargs = -C  
+#使用ssh的压缩传输方式 
+path = files/
+path = public/upload/
+#需要检查的路径，或者指定某个文件，可以写多个
+confirmbigdel = false 
+#默认值为true，表示当需要同步的两个目录一个为空时，unison将停止，这里设置为false，即便为空unison也不会停止运转
+log = true 
+#是否开启日志，true开启false关闭
+logfile = /home/cheng/.unison/log
+#日志存放目录
