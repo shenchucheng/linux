@@ -71,7 +71,7 @@ ZSH_THEME="ys"
 plugins=(git pip)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.zshrc_local 
+source $HOME/.linux/zsh/zshrc_local 
 # source /home/cheng/goproject/.gorc
 # export PATH=/usr/local/python3/bin:$PATH
 # export PATH=/usr/local/lib64/node-v9.3.0-linux-x64/lib/node_modules/nodeppt/bin/:$PATH

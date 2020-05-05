@@ -1,2 +1,0 @@
-# linux
-my linux configuration
