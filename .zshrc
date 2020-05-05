@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 alias del="mv -t ~/.temp" 
 alias fileshare="nohup python3 -m http.server6 >> ~/.temp/python_output.txt"
 alias ftpd="nohup python3 -m pyftpdlib -i :: >> ~/.temp/python_ftpd_output.txt"
-# alias sudo="sudo env PATH=$PATH"
+alias sudo="sudo env PATH=$PATH"
 
 
 # pip zsh completion start
@@ -117,3 +117,4 @@ function _pip_completion {
 compctl -K _pip_completion pip3
 # pip zsh completion end
 
+export PYTHONPATH=:/home/cheng/pyProject
