@@ -1,0 +1,104 @@
+set nocompatible              " required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+" call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdtree'
+Plugin 'mattn/emmet-vim'
+Plugin 'dyng/ctrlsf.vim'
+Plugin 'marijnh/tern_for_vim'
+
+" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" emmet
+autocmd FileType html,css,markdown EmmetInstall
+" paste模式
+set pastetoggle=<F3>
+set number
+syntax on
+set laststatus=2
+" set splitbelow
+" set splitright
+set wildmenu
+set mouse=
+set expandtab
+set list
+" split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" 折叠
+nnoremap <space> za
+
+" set paste
+set pastetoggle=<F3>
+
+" 目录树
+map <F4> :NERDTreeToggle<CR>
+
+"Python
+set filetype=python
+au BufNewFile,BufRead .py,.pyw setf python
+set autoindent "设置自动缩进
+set smartindent "自动下一行缩进
+set textwidth=79 "行最大宽度
+set expandtab "tab替换为空格键
+set tabstop=4 "设置table长度
+set softtabstop=4 "软制表符宽度为4
+set shiftwidth=4 "设置缩进的空格数为4
+set fileformat=unix "设置以unix的格式保存文件
+set foldmethod=indent "自动折叠
+set foldlevel=79 "最多79个字符
+
+"vim中F5直接调试
+map <F5> :call RunPython()<CR>
+func! RunPython()
+exec "w"
+if &filetype == 'python' "第一行#!/bin/python 运行python编译器
+exec "!time python %"
+elseif &filetype == 'sh' "第一行#!/bin/bash 运行shell编译器
+:!time bash %
+endif
+endfunc
+
+"全局搜索
+let g:ctrlsf_ackprg = 'ag' 
+
+
+"创建文件头
+autocmd BufNewFile *.py,*.tex exec ":call SetTitle()"
+func! SetTitle() 
+    if &filetype == 'python'
+        call setline(1,"#!/usr/bin/env python3")
+        call append(line("."),"# -*- coding:UTF-8 -*-")
+        call append(line(".")+1,"##########################################################################")
+        call append(line(".")+2, "# File Name: ".expand("%"))
+        call append(line(".")+3, "# Author: Shechucheng")
+        call append(line(".")+4, "# Created Time: ".strftime("%c"))
+        call append(line(".")+5, "##########################################################################")
+    endif
+    if &filetype == 'plaintex'
+        call setline(1,"% -*- coding:UTF-8 -*-")
+        call append(line("."),"%#########################################################################")
+        call append(line(".")+1, "% File Name: ".expand("%"))
+        call append(line(".")+2, "% Author: stubborn vegeta")
+        call append(line(".")+3, "% Created Time: ".strftime("%c"))
+        call append(line(".")+4, "%#########################################################################")
+    endif
+    normal Go 
+endfunc
