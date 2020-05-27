@@ -1,0 +1,24 @@
+#!/bin/sh
+Usage(){
+	echo "usage:"
+	echo ""
+	echo "    screen-rotate <direction>"
+	echo "    direction: up right down or left"
+}
+case $1 in 
+	"up")
+		xrandr -o normal
+		xinput set-prop 17 167 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0;;
+	"down")
+		xrandr -o inverted
+		xinput set-prop 17 167 -1.0, 0.0, 1.0, 0.0, -1.0, 1.0, 0.0, 0.0, 1.0;;
+	"right")
+		xrandr -o right
+		xinput set-prop 17 167 0.0, 1.0, 0.0, -1.0, 0.0, 1.0, 0.0, 0.0, 1.0;;
+	"left")
+		xrandr -o left
+		xinput set-prop 17 167 0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0;;
+	*)
+		Usage
+esac
+
