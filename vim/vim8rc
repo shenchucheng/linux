@@ -38,7 +38,8 @@ filetype plugin indent on    " required
 " Python
 "Pydocstring
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-autocmd FileType python nnoremap <Leader>d :Pydocstring<CR>
+nmap <silent> <C-_> <Plug>(pydocstring)
+
 " let g:pydocstring_formatter = 'numpy'
 " Autopep8
 autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR> 
