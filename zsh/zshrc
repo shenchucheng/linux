@@ -105,6 +105,8 @@ source $HOME/.linux/zsh/zshrc_local
 alias del="mv -t ~/.temp" 
 alias fileshare="nohup python3 -m http.server6 >> ~/.temp/python_output.txt"
 alias ftpd="nohup python3 -m pyftpdlib -i :: >> ~/.temp/python_ftpd_output.txt"
+
+alias wget-proxy="wget -e 'http_proxy=127.0.0.1:8118' -e 'https_proxy=127.0.0.1:8118'"
 # alias sudo="sudo env PATH=$PATH"
 # alias ngrok_ssh="autossh -M 2022 -NR 0.0.0.0:2222:127.0.0.1:22 cheng@106.13.24.45 -f"
 
