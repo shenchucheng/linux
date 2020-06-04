@@ -23,6 +23,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'heavenshell/vim-jsdoc'
 
+Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'thaerkh/vim-workspace'
 Plugin 'dyng/ctrlsf.vim'
