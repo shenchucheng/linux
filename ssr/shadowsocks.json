@@ -1,0 +1,11 @@
+{
+    "server":"110.110.110.110',
+    "server_port":110,
+    "local_address": "127.0.0.1",
+    "local_port":1080,
+    "password":"110",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open": false,
+    "workers": 1
+}
