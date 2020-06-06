@@ -1,3 +1,4 @@
 #!/usr/bin/sh
 mkdir ~/.temp
-mkdir ~/.linux/zsh/zshrc_local
+touch ~/.linux/zsh/zshrc_local
+ln -s ~/.linux/zsh/zshrc ~/.zshrc -f
