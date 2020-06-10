@@ -1,1 +1,2 @@
-export PATH=/usr/local/python3/bin:$PATH
+export PATH=/usr/local/python3/bin:/usr/local/lib64/node-v9.3.0-linux-x64/lib/node_modules/nodeppt/bin/:/home/cheng/.local/bin/:$PATH
+
