@@ -2,6 +2,7 @@
 # leanote 文件及数据库备份
 # USAGE:
 ##       backup_leanote password passwd  address >> /var/log/backup_leanote.log 2>&1
+##       openssl enc -d -aes256 -in *.tar.gz | tar xz
 
 FILENAME=leanote_mongodb_backup_`date +%Y_%m_%d`
 BACKUPDIR=/tmp/leanote/
