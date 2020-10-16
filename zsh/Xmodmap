@@ -1,0 +1,4 @@
+clear shift
+add shift = Shift_L
+keycode 105 = Shift_L
+keycode 108 = Menu
