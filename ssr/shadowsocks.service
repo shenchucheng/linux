@@ -1,7 +1,8 @@
 [Unit]
 Description=Shadowsocks
 [Service]
+User=cheng
 TimeoutStartSec=0
-ExecStart=/usr/bin/sslocal -c /etc/shadowsocks/shadowsocks.json
+ExecStart=/usr/bin/sslocal -c /etc/ssr/shadowsocks.json
 [Install]
 WantedBy=multi-user.target
