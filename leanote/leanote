@@ -1,7 +1,6 @@
 #!/bin/sh
-export GOROOT=/usr/local/lib64/go
-export GOBIN=$GOROOT/bin
-export PATH=$PATH:$GOBIN
-export GOPATH=/home/cheng/goproject
+export GOROOT=/opt/go
+export GOPATH=/home/cheng/Goproject
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 revel run github.com/leanote/leanote prod 9000
 

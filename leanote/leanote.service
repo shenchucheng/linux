@@ -4,8 +4,8 @@ After=network.target
 Requires=mongod.service
 
 [Service]
-ExecStart= /usr/local/bin/leanote 
-# Type=forking
+User=cheng
+ExecStart=/usr/local/bin/leanote
 
 [Install]
 WantedBy=multi-user.target
