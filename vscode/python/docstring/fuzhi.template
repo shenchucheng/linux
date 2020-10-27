@@ -1,0 +1,18 @@
+{{! fuzhi@ai Docstring Template }}
+
+:desc {{descriptionPlaceholder}} 
+{{#args}}
+:param {{var}}: {{descriptionPlaceholder}}
+{{/args}}
+{{#kwargs}}
+:param {{var}}: {{descriptionPlaceholder}}, defaults to {{&default}}
+{{/kwargs}}
+{{#exceptions}}
+:raises {{type}}: {{descriptionPlaceholder}}
+{{/exceptions}}
+{{#returns}}
+:return: {{descriptionPlaceholder}}
+{{/returns}}
+{{#yields}}
+:yield: {{descriptionPlaceholder}}
+{{/yields}}
