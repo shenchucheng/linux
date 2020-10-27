@@ -1,0 +1,5 @@
+export EMAIL=chuchengshen@fuzhi.ai 
+export AUTHOR="Shen Chucheng"
+export PATH=$PATH:/opt/nodejs/node-v12.19.0-linux-x64/bin
+export PATH=$PATH:/opt/go/bin
+export PATH=$PATH:/home/cheng/.local/bin 

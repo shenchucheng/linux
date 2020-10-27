@@ -3,6 +3,7 @@ set nocompatible              " required
 filetype off                  " required
 
 let mapleader = ','
+let g:EMAIL = 'chuchengshen@fuzhi.ai'
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -153,7 +154,7 @@ func! SetTitle()
         call setline(1,"#!/usr/bin/env python3")
         call append(line("."),"# -*- coding:UTF-8 -*-")
         call append(line(".")+1, "# @Date    : ".strftime("%Y-%m-%d %H:%M:%S"))
-        call append(line(".")+2, "# @Author  : Shenchucheng (shenchucheng@126.com)")
+        call append(line(".")+2, join(["# @Author  : ", $AUTHOR," (", $EMAIL, ")"], ""))
         call append(line(".")+3, "# @Desc    : ")
         call append(line(".")+4, "")
         call append(line(".")+5, "")
