@@ -1,16 +1,8 @@
 {
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter-notebook",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
-    "window.zoomLevel": 1,
     "fileheader.author": "Shen Chucheng",
-    "fileheader.custom_template_path": "/home/cheng/projects/vscodefileheader/template",
+    "fileheader.custom_template_path": "/home/cheng/.linux/vscode/fileheader/template",
     "fileheader.other_config": {
-        "email": "chuchengshen@fuzhi.ai",
-    
+        "email": "chuchengshen@fuzhi.ai"
     },
     "fileheader.is_header_exists": " ",
     "fileheader.file_suffix_mapping": {
