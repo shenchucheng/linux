@@ -1,0 +1,24 @@
+{
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter-notebook",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "window.zoomLevel": 1,
+    "fileheader.author": "Shen Chucheng",
+    "fileheader.custom_template_path": "/home/cheng/projects/vscodefileheader/template",
+    "fileheader.other_config": {
+        "email": "chuchengshen@fuzhi.ai",
+    
+    },
+    "fileheader.is_header_exists": " ",
+    "fileheader.file_suffix_mapping": {
+
+    
+    },
+    "fileheader.save": false,
+    "fileheader.open": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+}
